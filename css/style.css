@@ -1,0 +1,91 @@
+*{ margin:0; padding: 0; box-sizing: border-box; }
+html{
+    --backgroundColor: rgb(240, 240, 240);
+    --textColor:  #000;
+    --textAreaBG: #fff;
+    --themeToggleBG: rgb(0, 255, 242);
+    --themeToggleJustify: flex-start;
+    --themeToggleBtnCol: rgb(255, 196, 0);
+}
+html.dark{
+    --backgroundColor: rgb(20, 23, 36);
+    --textColor: rgb(214, 214, 214);
+    --textAreaBG: #333;
+    --themeToggleBG: rgb(0, 14, 94);
+    --themeToggleJustify: flex-end;
+    --themeToggleBtnCol: #fff;
+}
+body{
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+}
+body *{
+    color: var(--textColor);
+}
+
+.maxWidth{max-width: 1200px; margin: 0 auto; padding: 30px 0; }
+
+body > header{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+body > header > div{
+    width: 50px;
+    height: 30px;
+}
+body > header > div#themeToggle{
+    background-color: var(--themeToggleBG);
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: var(--themeToggleJustify);
+    padding: 0 5px;
+    cursor: pointer;
+}
+body > header > div#themeToggle > div{
+    width: 20px;
+    height: 20px;
+    background-color: var(--themeToggleBtnCol);
+    border-radius: 50%;
+}
+
+body > main{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+body > main > button{
+    background-color: green;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 200px;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+body > main > section > textarea{
+    /* resize:vertical; */
+    resize:none;
+    border-radius: 5px;
+    background-color: var(--textAreaBG);
+    text-align: left;
+    line-height: .55rem;
+    padding: 20px ;
+    height: 200px;
+    margin-top: 10px;
+}
+
+body > main > section > h3 > span{
+    color: #4686ff;
+    font-size: 1.5rem;
+    margin-left: 10px;
+
+    
+}
